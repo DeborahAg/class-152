@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+  <script src="Log.js"></script>
+  <script src="Box.js"></script>
+  <script src="move-box.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene background="color:#000000">
+
+    <a-camera position="0 0 5">
+
+    </a-camera>
+
+    <a-entity log="Hi, it's me!"></a-entity>
+
+    <a-entity position="0 0 0" rotation="0 0 0" move-box>
+
+      <a-box>
+
+      </a-box>
+
+    </a-entity>
+    <a-entity id="rocket" position="0 0 0" rotation ="0 0 0" move>
+      <!--Part 1-->
+      <a-cone id="part-1" position="0 1.5 0" color="tomato" radius-bottom="0.5" radius-top="0.1"></a-cone>
+      <!--Part 2-->
+      <a-cylinder id="part-2" position="0 -1 0" color="orange" radius="0.5" height="4">
+      </a-cylinder>
+      <!--Part 3-->
+      <a-cylinder id="part-3" position="0 -3 0" color="blue" radius="0.5" height="1.5">
+        <a-triangle position="-0.93 -0.95 -0.94" color="blue" scale="0.5 0.5 1" vertex-a="1 1 1" vertex-b="1 3 1" vertex-c="-1 1 1">
+        </a-triangle>
+        <a-triangle position="-0.11 -0.026 -0.94" color="blue" scale="0.5 0.5 1" vertex-a="1 1 1" vertex-b="1 3 1" vertex-c="-1 1 1" rotation="0 0 270">
+        </a-triangle>
+      </a-cylinder>
+    </a-entity>
+
+  </a-scene>
+
+</body>
+
+</html>
